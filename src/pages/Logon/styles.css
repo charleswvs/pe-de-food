@@ -1,0 +1,80 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  
+    justify-content: center;
+    align-items: center;
+    background: #E5E5E5;
+  }
+  
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  
+    align-items: center;
+  
+    height: 400px;
+    width: 380px;
+    background: #fff;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+  
+    margin-top: 52px;
+    
+  }
+
+  .nameInput {
+    height: 25px;
+    width: 280px;
+    margin-top: 10px;
+    border: 1px solid #2C0101BF;
+    border-radius: 5px;
+  
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .emailInput {
+    height: 25px;
+    width: 280px;
+    margin-top: 30px;
+    border: 1px solid #2C0101BF;
+    border-radius: 5px;
+  
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .passwordInput {
+    height: 25px;
+    width: 280px;
+    margin-top: 30px;
+    border: 1px solid #2C0101BF;
+    border-radius: 5px;
+  
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .buttonEntrar {
+    height: 45px;
+    width: 290px;
+    border-radius: 5px;
+  
+    margin-top: 45px;
+    border: 1px solid #2C0101BF;
+    background: #2C0101BF;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .buttonEntrar:hover{
+    cursor: pointer;
+  }
+  
+  .register {
+    color: #2C0101BF;
+
+  }
+  
