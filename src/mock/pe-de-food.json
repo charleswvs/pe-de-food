@@ -1,0 +1,173 @@
+{
+    "pratosDestaque": [
+        {
+            "id": "1",
+            "nome": "Panqueca Doce",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Seu zé",
+                "id": "1",
+                "urlProduto": "www.seuze.com/panqueca"
+            }
+        },
+        {
+            "id": "2",
+            "nome": "Cup Cake",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Doce Doce",
+                "id": "2",
+                "urlProduto": "www.docedoce.com/cupcake"
+            }
+        },
+        {
+            "id": "3",
+            "nome": "Bolo de Fruta",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Bolo da Maria",
+                "id": "3",
+                "urlProduto": "www.bolodamaria.com/bolo-de-frutas"
+            }
+        },
+        {
+            "id": "4",
+            "nome": "Lámen",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Japa",
+                "id": "4",
+                "urlProduto": "www.japa.com/lamen"
+            }
+        },
+        {
+            "id": "5",
+            "nome": "Suspiro de Limão",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Doce Doce",
+                "id": "2",
+                "urlProduto": "www.docedoce.com/suspiro"
+            }
+        },
+        {
+            "id": "6",
+            "nome": "Guacamole",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Mexicano",
+                "id": "5",
+                "urlProduto": "www.mexicano.com/guacamole"
+            }
+        },
+        {
+            "id": "7",
+            "nome": "Croissant",
+            "img": "www.google.com",
+            "restaurante": {
+                "nome": "Frances",
+                "id": "6",
+                "urlProduto": "www.france.com/croissant"
+            }
+        }
+    ],
+    "categorias": [
+        {
+            "nome": "Drink",
+            "img": "www.google.com",
+            "categoria": "drink",
+            "id": "1"
+        },
+        {
+            "nome": "Doce",
+            "img": "www.google.com",
+            "categoria": "doce",
+            "id": "2"
+        },
+        {
+            "nome": "Pizza",
+            "img": "www.google.com",
+            "categoria": "pizza",
+            "id": "3"
+        },
+        {
+            "nome": "Granola",
+            "img": "www.google.com",
+            "categoria": "granola",
+            "id": "4"
+        },
+        {
+            "nome": "Salada",
+            "img": "www.google.com",
+            "categoria": "salada",
+            "id": "5"
+        },
+        {
+            "nome": "Espaguete",
+            "img": "www.google.com",
+            "categoria": "espaguete",
+            "id": "6"
+        },
+        {
+            "nome": "Sanduiche",
+            "img": "www.google.com",
+            "categoria": "sanduiche",
+            "id": "7"
+        },
+        {
+            "nome": "Hamburguer",
+            "img": "www.google.com",
+            "categoria": "hamburguer",
+            "id": "8"
+        },
+        {
+            "nome": "Sushi",
+            "img": "www.google.com",
+            "categoria": "sushi",
+            "id": "9"
+        },
+        {
+            "nome": "Açaí",
+            "img": "www.google.com",
+            "categoria": "acai",
+            "id": "10"
+        }
+    ],
+    "restaurantes": [
+        {
+            "nome": "Seu zé",
+            "id": 1,
+            "url": "www.google.com",
+            "profileImg": "www.google.com",
+            "endereco": {
+                "rua": "Rua",
+                "numero": "123",
+                "bairro": "Bairro",
+                "cidade": "Betim"
+            },
+            "pratos": [
+                {
+                    "id": "1",
+                    "nome": "Panqueca Doce",
+                    "img": "www.google.com",
+                    "preco": 1.00,
+                    "quantidade": 10
+                },
+                {
+                    "id": "2",
+                    "nome": "Refrigerante",
+                    "img": "www.google.com",
+                    "preco": 1.00,
+                    "quantidade": 10
+                },
+                {
+                    "id": "3",
+                    "nome": "Suco",
+                    "img": "www.google.com",
+                    "preco": 1.00,
+                    "quantidade": 10
+                },
+            ]
+        }
+    ]
+}
