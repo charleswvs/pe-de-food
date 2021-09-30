@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Top, CardContainer, Title, Text } from './styles.js';
 import { Card } from '../../components/Card';
-import pratos from '../../mock/pe-de-food.json';
+import {pratosDestaque} from '../../mock/pe-de-food.json';
 
 const Pratos = () => {
   return (
@@ -9,7 +9,8 @@ const Pratos = () => {
       <div>
         <Title>Pratos para você</Title>
         <Top>
-          {pratos.map((prato) => {
+          {pratosDestaque.map((prato) => {
+            console.log(prato);
             <CardContainer key={prato.id}>
               <Card
                 imgUrl={prato.imageUrl}

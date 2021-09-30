@@ -3,7 +3,8 @@
         {
             "id": "1",
             "nome": "Panqueca Doce",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Seu zé",
                 "id": "1",
@@ -13,7 +14,8 @@
         {
             "id": "2",
             "nome": "Cup Cake",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Doce Doce",
                 "id": "2",
@@ -23,7 +25,8 @@
         {
             "id": "3",
             "nome": "Bolo de Fruta",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Bolo da Maria",
                 "id": "3",
@@ -33,7 +36,8 @@
         {
             "id": "4",
             "nome": "Lámen",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Japa",
                 "id": "4",
@@ -43,7 +47,8 @@
         {
             "id": "5",
             "nome": "Suspiro de Limão",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Doce Doce",
                 "id": "2",
@@ -53,7 +58,8 @@
         {
             "id": "6",
             "nome": "Guacamole",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Mexicano",
                 "id": "5",
@@ -63,7 +69,8 @@
         {
             "id": "7",
             "nome": "Croissant",
-            "img": "www.google.com",
+            "imgUrl": "www.google.com",
+            "imgAlt": "www.google.com",
             "restaurante": {
                 "nome": "Frances",
                 "id": "6",
@@ -166,7 +173,7 @@
                     "img": "www.google.com",
                     "preco": 1.00,
                     "quantidade": 10
-                },
+                }
             ]
         }
     ]
