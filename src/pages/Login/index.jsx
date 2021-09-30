@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import './styles.css';
+import { Link } from 'react-router-dom';
+import './login.css';
 
 const Login = () => {
   return (
@@ -9,16 +9,24 @@ const Login = () => {
       <section className="loginContainer">
         <h2>Login</h2>
 
-        <input className="emailInput" type="email" placeholder="Digite seu e-mail"/>
-        <input className="passwordInput" type="password" placeholder="Digite sua senha"/>
+        <input
+          className="emailInput"
+          type="email"
+          placeholder="Digite seu e-mail"
+        />
+        <input
+          className="passwordInput"
+          type="password"
+          placeholder="Digite sua senha"
+        />
 
         <button className="buttonEntrar">Entrar</button>
-        <Link className="register" to='/cadastrar'>
+        <Link className="register" to="/cadastrar">
           Cadastrar
         </Link>
       </section>
     </div>
   );
-}
+};
 
 export default Login;
