@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-
   justify-content: center;
   align-items: center;
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .loginContainer {
@@ -21,14 +20,13 @@
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
 
   margin-top: 52px;
-  
 }
 
 .emailInput {
   height: 25px;
   width: 280px;
   margin-top: 52px;
-  border: 1px solid #2C0101BF;
+  border: 1px solid #2c0101bf;
   border-radius: 5px;
 
   padding: 5px;
@@ -39,7 +37,7 @@
   height: 25px;
   width: 280px;
   margin-top: 30px;
-  border: 1px solid #2C0101BF;
+  border: 1px solid #2c0101bf;
   border-radius: 5px;
 
   padding: 5px;
@@ -49,7 +47,7 @@
 .buttonEntrar {
   height: 45px;
   width: 290px;
-  border: 0px solid #2C0101BF;
+  border: 0px solid #2c0101bf;
   border-radius: 5px;
 
   margin-top: 60px;
@@ -59,16 +57,15 @@
   font-size: 16px;
 }
 
-.buttonEntrar:hover{
+.buttonEntrar:hover {
   cursor: pointer;
 }
 
 .register {
   text-decoration: none;
-  color: #2C0101BF;
-
+  color: #2c0101bf;
 }
 
-.register:hover{
+.register:hover {
   cursor: pointer;
 }

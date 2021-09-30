@@ -1,39 +1,28 @@
 import React from 'react';
-import './styles.css';
+import { Container, Top, CardContainer, Title, Text } from './styles.js';
+import { Card } from '../../components/Card';
+import pratos from '../../mock/pe-de-food.json';
 
-const Pratos = (pratos) => {
+const Pratos = () => {
   return (
-    <div className="container">
+    <Container>
       <div>
-        <h3 className="title">Pratos para você</h3>
-        <div className="top">
-          <div className="cardContainer">
-            <div className="card"></div>
-            <span className="text">Panqueca doce</span>
-          </div>
-          <div className="cardContainer">
-            <div className="card"></div>
-            <span className="text">Panqueca doce</span>
-          </div>
-          <div className="cardContainer">
-            <div className="card"></div>
-            <span className="text">Panqueca doce</span>
-          </div>
-          <div className="cardContainer">
-            <div className="card"></div>
-            <span className="text">Panqueca doce</span>
-          </div>
-          <div className="cardContainer">
-            <div className="card"></div>
-            <span className="text">Panqueca doce</span>
-          </div>
-          <div className="cardContainer">
-            <div className="card"></div>
-            <span className="text">Panqueca doce</span>
-          </div>
-        </div>
+        <Title>Pratos para você</Title>
+        <Top>
+          {pratos.map((prato) => {
+            <CardContainer key={prato.id}>
+              <Card
+                imgUrl={prato.imageUrl}
+                imgAlt={prato.imageAlt}
+                width="130px"
+                height="264px"
+              />
+              <Text>{prato.nome}</Text>
+            </CardContainer>;
+          })}
+        </Top>
       </div>
-    </div>
+    </Container>
   );
 };
 
