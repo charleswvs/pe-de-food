@@ -1,0 +1,39 @@
+.pratos-container {
+  padding: 30px 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #2c0101;
+  overflow-x: scroll;
+}
+
+.pratos-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.pratos-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.pratos-card {
+  width: 130px;
+  height: 264px;
+  box-shadow: 6px 5px 8px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  background: white;
+}
+
+.pratos-title {
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.pratos-text {
+  margin-top: 16px;
+  font-size: 14px;
+}

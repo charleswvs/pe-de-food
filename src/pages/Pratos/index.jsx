@@ -1,29 +1,27 @@
 import React from 'react';
-import { Container, Top, CardContainer, Title, Text } from './styles.js';
+import './styles.css';
 import { Card } from '../../components/Card';
-import {pratosDestaque} from '../../mock/pe-de-food.json';
+import { pratosDestaque } from '../../mock/pe-de-food.json';
 
 const Pratos = () => {
   return (
-    <Container>
-      <div>
-        <Title>Pratos para você</Title>
-        <Top>
-          {pratosDestaque.map((prato) => {
-            console.log(prato);
-            <CardContainer key={prato.id}>
-              <Card
-                imgUrl={prato.imageUrl}
-                imgAlt={prato.imageAlt}
-                width="130px"
-                height="264px"
-              />
-              <Text>{prato.nome}</Text>
-            </CardContainer>;
-          })}
-        </Top>
+    <div className="pratos-container">
+      <h1 className="pratos-title">Pratos para você</h1>
+      <div className="pratos-top">
+        {pratosDestaque.map((prato) => (
+          <div className="pratos-card-container" key={prato.id}>
+            <Card
+              imgUrl={prato.imgUrl}
+              imgAlt={prato.imgAlt}
+              width="130px"
+              height="264px"
+              key={prato.id}
+            />
+            <span>{prato.nome}</span>
+          </div>
+        ))}
       </div>
-    </Container>
+    </div>
   );
 };
 
