@@ -13,8 +13,8 @@ const Pratos = () => {
             <Card
               imgUrl={prato.imgUrl}
               imgAlt={prato.imgAlt}
-              width="130px"
-              height="264px"
+              width={130}
+              height={264}
               key={prato.id}
             />
             <span className="name">{prato.nome}</span>
@@ -29,8 +29,8 @@ const Pratos = () => {
             <Card
               imgUrl={categoria.imgUrl}
               imgAlt={categoria.nome}
-              width="243px"
-              height="306px"
+              width={243}
+              height={306}
               key={categoria.id}
             />
             <span className="name">{categoria.nome}</span>
