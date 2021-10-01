@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './login.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./login.css";
 
 const Login = () => {
   return (
@@ -20,7 +20,9 @@ const Login = () => {
           placeholder="Digite sua senha"
         />
 
-        <button className="buttonEntrar">Entrar</button>
+        <Link className="register" to="/restaurantes">
+          <button className="buttonEntrar">Entrar</button>
+        </Link>
         <Link className="register" to="/cadastrar">
           Cadastrar
         </Link>

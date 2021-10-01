@@ -1,0 +1,13 @@
+.backButton {
+    text-decoration: none;
+
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+}
+
+.backButton:hover {
+    opacity: 0.6;
+}

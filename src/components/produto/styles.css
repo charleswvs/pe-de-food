@@ -1,0 +1,72 @@
+.produto-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.produto-card-container {
+  height: 200px;
+  width: 100%;
+}
+
+.produto-card-container img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.produto-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.produto-button {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  background-color: #fbcb6e;
+  padding: 10px;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.produto-inputContainer {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.produto-inputContainer input {
+  width: 30px;
+  background-color: #c4c4c4;
+  font-size: 25px;
+  border: none;
+  text-align: center;
+}
+
+/* export const Container = styled.div`
+
+`;
+
+export const CardContainer = styled.div`
+
+`;
+
+export const CardContent = styled.div`
+
+`
+
+export const Button = styled.div`
+  
+`;  
+
+export const InputContainer = styled.div`
+  
+`; */

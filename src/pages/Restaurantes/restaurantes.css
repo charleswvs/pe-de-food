@@ -1,0 +1,33 @@
+.restauranteContainerRestaurantes {
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurantesList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);;
+    grid-gap: 10px;
+}
+
+.arrow {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+
+.arrow:hover {
+    opacity: 0.6;
+}
+
+.arrow:disabled {
+    cursor: not-allowed;
+}

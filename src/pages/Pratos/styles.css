@@ -1,19 +1,43 @@
-.pratos-container {
-  padding: 30px 80px;
-  width: 100%;
+.pratos-page-container {
+  padding: 0 80px;
   display: flex;
   flex-direction: column;
   color: #2c0101;
+}
+
+.pratos {
+  display: flex;
+  height: 312px;
+  gap: 18px;
+  cursor: pointer;
   overflow-x: scroll;
 }
 
-.pratos-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
+/* width */
+.pratos::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+.pratos::-webkit-scrollbar-track {
+  background: #b3afae;
+  border-radius: 4px;
+}
+
+/* Handle */
+.pratos::-webkit-scrollbar-thumb {
+  background: #875a5a;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.pratos::-webkit-scrollbar-thumb:hover {
+  background: #6f4848;
+  border-radius: 4px;
 }
 
 .pratos-card-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,12 +52,49 @@
   background: white;
 }
 
-.pratos-title {
-  margin-top: 16px;
+.prato-title {
+  font-size: 24px;
+}
+
+.categoria-title {
+  margin-top: 50px;
   font-size: 24px;
 }
 
 .pratos-text {
   margin-top: 16px;
   font-size: 14px;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.categorias-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.name {
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .categorias {
+    justify-content: center;
+  }
+
+  .pratos-page-container {
+    padding: 0 20px;
+  }
+
+  .categoria-title {
+    align-self: center;
+  }
 }

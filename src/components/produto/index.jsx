@@ -1,35 +1,45 @@
 import React, { useState } from 'react';
-import { Container, CardContainer, CardContent, Button, InputContainer } from './styles';
-import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai'
+import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
+import './styles.css';
 
 const Produto = () => {
-  const [quantidade, setQuantidade] = useState(0)
-  const valor = 25
+  const [quantidade, setQuantidade] = useState(0);
+  const valor = 25;
   return (
-    <Container>
-      <CardContainer>
-        <img src="https://images.unsplash.com/photo-1619860860774-1e2e17343432?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80"/>
-      </CardContainer>
-      <CardContent>
-        <h2>
-          Sandubão
-        </h2>
-        <InputContainer>
-          <AiFillMinusCircle color="#C4C4C4" size={30}  onClick={() => setQuantidade(quantidade => quantidade >= 0 ? quantidade + 1 : quantidade)}/>
-          <input value={quantidade}/>
-          <AiFillPlusCircle color="#C4C4C4" size={30} onClick={() => setQuantidade(quantidade => quantidade + 1)} />
-        </InputContainer>
-        <Button>
-          <span>
-            R${(valor * quantidade).toFixed(2)}
-          </span>
-          <span>
-            COMPRAR
-          </span>
-        </Button>
-      </CardContent>
-    </Container>
+    <div className="produto-container">
+      <div className="produto-card-container">
+        <img src="https://images.unsplash.com/photo-1619860860774-1e2e17343432?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80" />
+      </div>
+      <div className="produto-card-content">
+        <h2>Sandubão</h2>
+        <div className="produto-input-container">
+          <AiFillMinusCircle
+            color="#C4C4C4"
+            size={30}
+            onClick={() =>
+              setQuantidade((quantidade) =>
+                quantidade > 0 ? quantidade - 1 : quantidade
+              )
+            }
+          />
+          <input value={quantidade} />
+          <AiFillPlusCircle
+            color="#C4C4C4"
+            size={30}
+            onClick={() =>
+              setQuantidade((quantidade) =>
+                quantidade >= 0 ? quantidade + 1 : quantidade
+              )
+            }
+          />
+        </div>
+        <div className="produto-button">
+          <span>R${(valor * quantidade).toFixed(2)}</span>
+          <span>COMPRAR</span>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default Produto;
