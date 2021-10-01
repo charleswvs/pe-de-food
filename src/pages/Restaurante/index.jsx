@@ -1,57 +1,35 @@
-import React, { useState } from 'react';
-
-import { Card }  from '../../components/card';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-
-import { restaurantes } from '../../mock/pe-de-food.json';
+import React from 'react';
 
 import "./restaurante.css"
 
+import Produto from '../../components/produto';
+import BackButton from '../../components/backButton';
+
 const Restaurante = () => {
-  const [listPage, setListPage] = useState({
-    inicio: 0,
-    fim: 4
-  })
-
-  const handleLeftList = () => {
-    setListPage({
-      inicio: 0,
-      fim: 4
-    })
-  }
-
-  const handleRightList = () => {
-    setListPage({
-      inicio: 1,
-      fim: 5
-    })
-  }
-
   return (
-    <main className="restauranteContainer">
-      {restaurantes.map((item,idx) => (
-        <section key={item.tipo} className="restauranteSection">
-        <h2 style={{marginBottom: '30px'}}>RESTAURANTES {item.tipo} </h2>
-        <div className='restaurantesList'>
-          <button className="arrow" onClick={handleLeftList} disabled={listPage.inicio === 0 || idx !==0} >
-          <FiChevronLeft size={40}/>
+    <div style={{backgroundColor: '#E0DDDC'}}>
+      <main className="restaurantContainer">
+        <BackButton goTo="/pratos" />
+        <section className="restaurantHeader">
+          <img alt="resturante do seu zé" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80" />
+        </section>
+        <h1>
+          Recanto do seu zé - sanduíches artesanais
+        </h1>
+        <div className="restaurantInputContainer">
+          <input className="restaurantInput" placeholder="Digite o nome de um prato" />
+          <button className="restaurantSearchButton">
+            BUSCAR
           </button>
-          
-          <div className="grid">
-            {item.restaurantes
-            .slice(idx===0 ? listPage.inicio : 0, idx ===0 ? listPage.fim : 4)
-            .map(restaurante => (
-              <Card key={`${restaurante.id}-${restaurante.nome}`} margin='auto' width={230} height={230} imgUrl={restaurante.profileImg} imgAlt={restaurante.nome} />
-            ))}
-          </div>
-          <button className="arrow" onClick={handleRightList} disabled={listPage.inicio === 1 || idx !==0}>
-            <FiChevronRight size={40}/>
-          </button>
-          
         </div>
-      </section>
-      ))}
-    </main>
+        <div className="restaurantGrid">
+          <Produto/>
+          <Produto/>
+          <Produto/>
+          <Produto/>
+        </div>
+      </main>
+    </div>
   )
 }
 
