@@ -1,0 +1,48 @@
+.restaurantContainer {
+  padding: 150px 300px;
+}
+
+.restaurantHeader {
+  width: auto;
+  height: 234px;
+}
+
+.restaurantHeader img {
+  width: 100%;
+  height: 234px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.restaurantInputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurantInput {
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #FBCB6E;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.restaurantSearchButton {
+  background-color: #FBCB6E;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border-radius: 50px;
+  color: #000;
+  border: none;
+  padding: 10px;
+}
+
+.restaurantGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 20px;
+}
