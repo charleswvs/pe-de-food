@@ -1,5 +1,4 @@
 .restauranteContainer {
-    height: 100vh;
     padding: 80px;
 
     display: flex;
@@ -17,4 +16,18 @@
     width: 100%;
     grid-template-columns: repeat(4, 1fr);;
     grid-gap: 10px;
+}
+
+.arrow {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+
+.arrow:hover {
+    opacity: 0.6;
+}
+
+.arrow:disabled {
+    cursor: not-allowed;
 }
