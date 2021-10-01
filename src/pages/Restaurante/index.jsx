@@ -29,23 +29,23 @@ const Restaurante = () => {
 
   return (
     <main className="restauranteContainer">
-      {restaurantes.map(item => (
-        <section className="restauranteSection">
+      {restaurantes.map((item,idx) => (
+        <section key={item.tipo} className="restauranteSection">
         <h2 style={{marginBottom: '30px'}}>RESTAURANTES {item.tipo} </h2>
         <div className='restaurantesList'>
-          <button className="arrow" onClick={handleLeftList} disabled={listPage.inicio === 0}>
-          <FiChevronLeft size={60}/>
+          <button className="arrow" onClick={handleLeftList} disabled={listPage.inicio === 0 || idx !==0} >
+          <FiChevronLeft size={40}/>
           </button>
           
           <div className="grid">
             {item.restaurantes
-            .slice(listPage.inicio, listPage.fim)
+            .slice(idx===0 ? listPage.inicio : 0, idx ===0 ? listPage.fim : 4)
             .map(restaurante => (
-              <Card margin='auto' width={230} height={230} imgUrl={restaurante.profileImg} imgAlt={restaurante.nome} />
+              <Card key={`${restaurante.id}-${restaurante.nome}`} margin='auto' width={230} height={230} imgUrl={restaurante.profileImg} imgAlt={restaurante.nome} />
             ))}
           </div>
-          <button className="arrow" onClick={handleRightList} disabled={listPage.inicio === 1}>
-            <FiChevronRight size={60}/>
+          <button className="arrow" onClick={handleRightList} disabled={listPage.inicio === 1 || idx !==0}>
+            <FiChevronRight size={40}/>
           </button>
           
         </div>
