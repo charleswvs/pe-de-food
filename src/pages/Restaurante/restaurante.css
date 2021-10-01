@@ -1,5 +1,5 @@
 .restaurantContainer {
-  padding: 150px 300px;
+  padding: 40px 100px;
 }
 
 .restaurantHeader {
@@ -25,13 +25,13 @@
   font-family: 'Times New Roman', Times, serif;
   padding: 10px;
   border-radius: 50px;
-  border: 1px solid #FBCB6E;
+  border: 1px solid #fbcb6e;
   text-transform: uppercase;
   margin-right: 30px;
 }
 
 .restaurantSearchButton {
-  background-color: #FBCB6E;
+  background-color: #fbcb6e;
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   border-radius: 50px;
