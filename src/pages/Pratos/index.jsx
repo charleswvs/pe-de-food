@@ -1,10 +1,10 @@
-import React from "react";
-import "./styles.css";
-import { Card } from "../../components/Card";
+import React from 'react';
+import './styles.css';
+import { Card } from '../../components/card';
 import { Link } from 'react-router-dom';
-import BackButton from "../../components/backButton";
+import BackButton from '../../components/backButton';
 
-import { pratosDestaque, categorias } from "../../mock/pe-de-food.json";
+import { pratosDestaque, categorias } from '../../mock/pe-de-food.json';
 
 const Pratos = () => {
   return (
