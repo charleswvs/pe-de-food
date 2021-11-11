@@ -1,46 +1,44 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import './logon.css';
 
 const Logon = () => {
+  let history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, setUser] = useState({email: "", password: ""});
-
-
-  const handleChangeEmail = event => {
+  const handleChangeEmail = (event) => {
     setEmail(event.target.value);
-  }
+  };
 
-  const handleChangePassword = event => {
+  const handleChangePassword = (event) => {
     setPassword(event.target.value);
-  }
+  };
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const user = {
-      email: email,
-      password: password
-    };
-    console.log(user)
-
-    axios.post(`http://localhost:8080/cadastro`, user )
-      .then(res => {
-        console.log(res);
-        setUser(res.data)
+    axios
+      .post(`https://afternoon-garden-13285.herokuapp.com/cadastro`, {
+        email: email,
+        password: password,
       })
-      // Como limpar input dps que submeter?
-  }
+      .then((res) => {
+        console.log(res);
+        history.push('/');
+        setEmail('');
+        setPassword('');
+      });
+  };
   return (
     <div className="container">
       <h1>Pé de food</h1>
       <section className="loginContainer">
         <h2>Cadastrar</h2>
 
-        <form onSubmit={handleSubmit}>
+        <form className="formContainer" onSubmit={handleSubmit}>
           <input
             className="emailInput"
             type="email"
