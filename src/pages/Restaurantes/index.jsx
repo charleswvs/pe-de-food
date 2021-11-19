@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-
-import { Card } from "../../components/card";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-import { restaurantes } from "../../mock/pe-de-food.json";
+import React, { useEffect, useState } from 'react';
+import { Card } from '../../components/card';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import "./restaurantes.css";
+import './restaurantes.css';
 
 const Restaurante = () => {
+  const [restaurantes, setRestaurantes] = useState([]);
   const [listPage, setListPage] = useState({
     inicio: 0,
     fim: 4,
@@ -28,49 +27,55 @@ const Restaurante = () => {
     });
   };
 
+  useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  const getRestaurants = async () => {
+    const { data } = await axios.get(
+      `https://afternoon-garden-13285.herokuapp.com/restaurantes`
+    );
+
+    if (data) {
+      setRestaurantes(data);
+    }
+  };
+
   return (
     <main className="restauranteContainerRestaurantes">
-      {restaurantes.map((item, idx) => (
-        <section key={item.tipo} className="restauranteSection">
-          <h2 style={{ marginBottom: "30px" }}>RESTAURANTES {item.tipo} </h2>
-          <div className="restaurantesList">
-            <button
-              className="arrow"
-              onClick={handleLeftList}
-              disabled={listPage.inicio === 0 || idx !== 0}
-            >
-              <FiChevronLeft size={40} />
-            </button>
+      <section className="restauranteSection">
+        <h2 style={{ marginBottom: '30px' }}>RESTAURANTES JAPONESES</h2>
+        <div className="restaurantesList">
+          <button
+            className="arrow"
+            onClick={handleLeftList}
+            disabled={listPage.inicio === 0}
+          >
+            <FiChevronLeft size={40} />
+          </button>
 
-            <div className="grid">
-              {item.restaurantes
-                .slice(
-                  idx === 0 ? listPage.inicio : 0,
-                  idx === 0 ? listPage.fim : 4
-                )
-                .map((restaurante) => (
-                  <Link to="/pratos">
-                    <Card
-                      key={`${restaurante.id}-${restaurante.nome}`}
-                      margin="auto"
-                      width={230}
-                      height={230}
-                      imgUrl={restaurante.profileImg}
-                      imgAlt={restaurante.nome}
-                    />
-                  </Link>
-                ))}
-            </div>
-            <button
-              className="arrow"
-              onClick={handleRightList}
-              disabled={listPage.inicio === 1 || idx !== 0}
-            >
-              <FiChevronRight size={40} />
-            </button>
+          <div className="grid">
+            {restaurantes.slice(listPage.inicio, listPage.fim).map((item) => (
+              <Link to={`/pratos/${item.id}`} key={`${item.id}-${item.nome}`}>
+                <Card
+                  margin="auto"
+                  width={230}
+                  height={230}
+                  imgUrl={item.profileImg}
+                  imgAlt={item.nome}
+                />
+              </Link>
+            ))}
           </div>
-        </section>
-      ))}
+          <button
+            className="arrow"
+            onClick={handleRightList}
+            disabled={listPage.inicio === 1}
+          >
+            <FiChevronRight size={40} />
+          </button>
+        </div>
+      </section>
     </main>
   );
 };

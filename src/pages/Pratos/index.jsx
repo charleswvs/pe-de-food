@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.css';
 import { Card } from '../../components/card';
 import { Link } from 'react-router-dom';
 import BackButton from '../../components/backButton';
+import { useParams } from 'react-router';
+import axios from 'axios';
 
 import { pratosDestaque, categorias } from '../../mock/pe-de-food.json';
 
 const Pratos = () => {
+  const { restauranteid } = useParams();
+
+  const getPratos = () => {
+    axios
+      .get(
+        `https://afternoon-garden-13285.herokuapp.com/restaurante/${restauranteid}`
+      )
+      .then((res) => {
+        console.log(res);
+      });
+  };
+
+  useEffect(() => {
+    getPratos();
+  }, []);
+
   return (
     <div className="pratos-page-container">
       <BackButton goTo="/restaurantes" />

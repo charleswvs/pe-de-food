@@ -11,7 +11,7 @@ const Router = () => (
     <Switch>
       <Route exact path="/" component={Login} />
       <Route path="/cadastrar" component={Logon} />
-      <Route path="/pratos" component={Pratos} />
+      <Route path="/pratos/:restauranteid" component={Pratos} />
       <Route path="/restaurante" component={Restaurante} />
       <Route path="/restaurantes" component={Restaurantes} />
     </Switch>

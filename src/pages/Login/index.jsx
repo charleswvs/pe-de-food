@@ -26,12 +26,16 @@ const Login = () => {
         password: password,
       })
       .then((res) => {
+        axios.defaults.headers.common[
+          'Authorization'
+        ] = `Bearer ${res.data.token}`;
         console.log(res);
         history.push('/restaurantes');
         setEmail('');
         setPassword('');
       });
   };
+
   return (
     <div className="container">
       <h1>Pé de food</h1>
