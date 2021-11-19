@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Card } from '../../components/card';
 import { Link } from 'react-router-dom';
@@ -6,10 +6,10 @@ import BackButton from '../../components/backButton';
 import { useParams } from 'react-router';
 import axios from 'axios';
 
-import { pratosDestaque, categorias } from '../../mock/pe-de-food.json';
-
 const Pratos = () => {
   const { restauranteid } = useParams();
+  const [pratos, setPratos] = useState([]);
+  const [categorias, setCategorias] = useState([]);
 
   const getPratos = () => {
     axios
@@ -17,7 +17,8 @@ const Pratos = () => {
         `https://afternoon-garden-13285.herokuapp.com/restaurante/${restauranteid}`
       )
       .then((res) => {
-        console.log(res);
+        setPratos(res.data.pratos);
+        setCategorias(res.data.categorias);
       });
   };
 
@@ -30,9 +31,9 @@ const Pratos = () => {
       <BackButton goTo="/restaurantes" />
       <h1 className="prato-title">Pratos para você</h1>
       <div className="pratos">
-        {pratosDestaque.map((prato) => (
+        {pratos.map((prato) => (
           <div className="pratos-card-container" key={prato.id}>
-            <Link to="/restaurante">
+            <Link to={`/restaurante/${restauranteid}`}>
               <Card
                 imgUrl={prato.imgUrl}
                 imgAlt={prato.imgAlt}
