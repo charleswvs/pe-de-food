@@ -8,7 +8,7 @@ import BackButton from '../../components/backButton';
 import { useParams } from 'react-router';
 
 const Restaurante = () => {
-  const { restauranteid } = useParams();
+  const { restauranteid, restauranteNome } = useParams();
 
   return (
     <div style={{backgroundColor: '#E0DDDC'}}>
@@ -18,7 +18,7 @@ const Restaurante = () => {
           <img alt="resturante do seu zé" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80" />
         </section>
         <h1>
-          Recanto do seu zé - sanduíches artesanais
+          {restauranteNome}
         </h1>
         <div className="restaurantInputContainer">
           <input className="restaurantInput" placeholder="Digite o nome de um prato" />
@@ -27,9 +27,6 @@ const Restaurante = () => {
           </button>
         </div>
         <div className="restaurantGrid">
-          <Produto/>
-          <Produto/>
-          <Produto/>
           <Produto/>
         </div>
       </main>

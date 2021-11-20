@@ -8,6 +8,7 @@ import axios from 'axios';
 
 const Pratos = () => {
   const { restauranteid } = useParams();
+  const [nome, setNome] = useState([]);
   const [pratos, setPratos] = useState([]);
   const [categorias, setCategorias] = useState([]);
 
@@ -17,6 +18,7 @@ const Pratos = () => {
         `https://afternoon-garden-13285.herokuapp.com/restaurante/${restauranteid}`
       )
       .then((res) => {
+        setNome(res.data.nome);
         setPratos(res.data.pratos);
         setCategorias(res.data.categorias);
       });
@@ -33,7 +35,7 @@ const Pratos = () => {
       <div className="pratos">
         {pratos.map((prato) => (
           <div className="pratos-card-container" key={prato.id}>
-            <Link to={`/restaurante/${restauranteid}`}>
+            <Link to={`/restaurante/${restauranteid}/${nome}/${prato.nome}`}>
               <Card
                 imgUrl={prato.imgUrl}
                 imgAlt={prato.imgAlt}
